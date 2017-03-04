@@ -14,6 +14,10 @@ import model.Student;
 import table.StudentModel;
 
 public class RoszvrhSeStudentem extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JScrollPane sPane;
 	private StudentModel studentModel;
 	private JTable studentTable;

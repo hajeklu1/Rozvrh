@@ -8,9 +8,12 @@ import javax.swing.JTable;
 
 import model.Student;
 import table.RozvrhModel;
-import table.StudentModel;
 
 public class RozvrhS extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTable rozvrhTable;
 	private JScrollPane rozvrhScroll;
 	private RozvrhModel rozvrhModel;
