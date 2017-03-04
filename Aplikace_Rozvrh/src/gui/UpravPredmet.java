@@ -13,11 +13,14 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import model.Day;
-import model.Days;
 import model.Predmet;
 import table.PredmetyModel;
 
 public class UpravPredmet extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTextField abrev = new JTextField("", 20);
 	private JTextField jmeno = new JTextField("", 20);
 	private JTextField ucitel = new JTextField("", 20);

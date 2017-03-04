@@ -58,8 +58,6 @@ public class VyberPredmet extends JFrame {
 						odeber.setEnabled(false);
 						return;
 					}
-
-					int i = 0;
 					for (Predmet predmet : pr) {
 						Predmet p = pModel.getPredmet(row);
 						if (predmet.equals(p)) {
