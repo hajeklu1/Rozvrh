@@ -17,6 +17,7 @@ public class Reader {
 		try (BufferedReader bf = new BufferedReader(new FileReader("Studenti.txt"))) {
 			String temp;
 			while (!"?".equals(temp = bf.readLine())) {
+				boolean zapis = true;
 				String[] arry = temp.split("%");
 				String[] student = arry[0].split(";");
 				Student s = new Student(student[2], student[0], student[1], student[3], Integer.parseInt(student[4]));
@@ -27,7 +28,15 @@ public class Reader {
 						String[] predmet = p[i].split(";");
 						Predmet pr = new Predmet(predmet[0], predmet[4], predmet[3], Integer.parseInt(predmet[5]),
 								savetoDay(predmet[2]), Integer.parseInt(predmet[1]));
-						predmetModel.addPredmet(pr);
+						for (int j = 0; j < predmetModel.getPredmety().size(); j++) {
+							Predmet predmet1 = predmetModel.getPredmet(j);
+							if (predmet1.equals(pr)) {
+								zapis = false;
+							}
+						}
+						if (zapis) {
+							predmetModel.addPredmet(pr);
+						}
 						s.addPredmet(pr);
 						pr.addStudent(s);
 					}
