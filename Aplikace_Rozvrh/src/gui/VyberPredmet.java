@@ -107,14 +107,13 @@ public class VyberPredmet extends JFrame {
 				int row = pTable.getSelectedRow();
 				if (row >= 0) {
 					Predmet p = pModel.getPredmet(row);
-					for (Predmet predmet : student.getRegisterPredemt()) {
-						if (!predmet.equals(p)) {
-							JOptionPane.showMessageDialog(null, "Předmět není zapsán");
-							return;
+					for (int i = 0; i < student.getRegisterPredemt().size(); i++) {
+						Predmet pr = student.getRegisterPredemt().get(i);
+						if (pr.equals(p)) {
+							student.removePredmet(p);
 						}
 					}
 					pModel.fireTableDataChanged();
-					student.removePredmet(p);
 					for (int i = 0; i < p.getRegistedStudents().size(); i++) {
 						if (p.getRegistedStudents().get(i).equals(student)) {
 							p.removeStudent(i);
