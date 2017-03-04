@@ -1,0 +1,4 @@
+Tomas;Okoun;OkounTo1;tomasOkoun@uhk.cz;1%Zkratka..;1;Pondeli;Učitel..;Název..;1&
+Pepa;Novak;NovakPe1;pepaNovak@uhk.cz;1%TNPW;1;Utery;Pavel Mrazek;Tvorba Webu;5&
+Jmeno..;Příjmení..;PříjmJm1;Email..;1%
+?
